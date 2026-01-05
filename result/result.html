@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | ExamSystem</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../config.js"></script>
+  </head>
+
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+    <nav
+      class="flex justify-between items-center py-3 px-6 lg:px-20 bg-white shadow-sm border-b"
+    >
+      <div class="icon">
+        <a href="#">
+          <h1 class="text-2xl font-extrabold text-blue-600 tracking-tight">
+            ExamSystem
+          </h1>
+        </a>
+      </div>
+      <div id="signoutBtn" class="btn btn-normal gap-2">
+        <span>SignOut</span>
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </div>
+    </nav>
+
+    <header
+      class="flex flex-col w-[60%] mx-auto items-center justify-between py-16 gap-10"
+    >
+      <div
+        id="radial-progress"
+        class="radial-progress bg-gray-200 text-blue-600 flex flex-col items-center justify-center text-center gap-3"
+        style="--value: 80; --size: 15rem; --thickness: 1rem"
+        aria-valuenow="80"
+        role="progressbar"
+      >
+        <div style="background-color: #fae48b" class="p-2 rounded-full">
+          <i class="fa-solid fa-trophy text-2xl" style="color: #957f2f"></i>
+        </div>
+        <div>
+          <h3 id="gradeHeader" class="font-extrabold text-3xl text-black"></h3>
+        </div>
+        <div>
+          <p class="text-gray-500 mt-2 f-light">Score</p>
+        </div>
+      </div>
+      <div class="text-center flex flex-col">
+        <h2 id="congratHeader" class="font-bold text-2xl"></h2>
+        <p class="text-gray-500 mt-2 f-light">
+          You have successfully completed the JS exam. 101 Final Exam.
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4">
+        <div
+          class="flex items-center gap-2 px-4 py-1 md:px-6 md:py-2 bg-sky-100 text-sky-600 rounded-full"
+        >
+          <i class="fa-solid fa-circle-check"></i>
+          <span class="text-sm md:text-base font-medium">Graded</span>
+        </div>
+
+        <div
+          class="flex items-center gap-2 px-4 py-1 md:px-6 md:py-2 bg-gray-100 text-gray-600 rounded-full"
+        >
+          <i class="fa-solid fa-calendar"></i>
+          <span id="todayDate" class="text-sm md:text-base font-medium"></span>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-3 gap-5 w-full max-w-4xl p-6 rounded-xl"
+      >
+        <div
+          class="bg-white p-6 rounded-lg shadow-sm flex flex-col gap-2 items-center justify-center text-center border border-gray-100"
+        >
+          <i class="fa-solid fa-clock text-sky-500 text-xl"></i>
+          <h2 class="text-2xl font-bold text-gray-800">1h</h2>
+          <p class="text-gray-500 text-sm font-medium">Time Taken</p>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-lg shadow-sm flex flex-col gap-2 items-center justify-center text-center border border-gray-100"
+        >
+          <i class="fa-solid fa-bullseye text-sky-500 text-xl"></i>
+          <h2 id="correctNum" class="text-2xl font-bold text-gray-800"></h2>
+          <p class="text-gray-500 text-sm font-medium">Correct</p>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-lg shadow-sm flex flex-col gap-2 items-center justify-center text-center border border-gray-100"
+        >
+          <i class="fa-solid fa-arrow-trend-up text-sky-500 text-xl"></i>
+          <h2 class="text-2xl font-bold text-gray-800">Top 10%</h2>
+          <p class="text-gray-500 text-sm font-medium">Ranking</p>
+        </div>
+      </div>
+      <button
+        id="backToStartBtn"
+        class="btn bg-blue-500 rounded-full min-w-[300px]"
+      >
+        <span class="text-lg text-white">Back to Home</span>
+      </button>
+    </header>
+    <script src="./result.js"></script>
+  </body>
+</html>

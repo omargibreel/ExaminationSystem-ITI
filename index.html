@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | ExamSystem</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="config.js"></script>
+  </head>
+
+  <body class="bg-gray-100 font-sans">
+    <nav class="text-center pt-12">
+      <a href="#">
+        <h1 class="text-2xl font-extrabold text-blue-600 tracking-tight">
+          ExamSystem
+        </h1>
+      </a>
+    </nav>
+
+    <div class="container lg:w-[30%] md:w-[50%] w-[90%] mx-auto mt-8">
+      <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
+        <header class="flex flex-col items-center mb-8">
+          <div
+            class="icon bg-blue-50 rounded-full size-16 flex items-center justify-center text-blue-500 text-3xl mb-4"
+          >
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-gray-800">Welcome Back</h2>
+          <p class="font-light text-gray-500 text-center">
+            Please sign in to continue to your dashboard
+          </p>
+        </header>
+
+        <form id="loginForm" class="flex flex-col gap-5">
+          <div class="form-group">
+            <label
+              for="email"
+              class="block mb-2 text-sm font-semibold text-gray-700"
+              >Email Address</label
+            >
+            <div class="relative">
+              <input
+                class="pl-10 pr-4 w-full py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="student@example.com"
+                required
+              />
+              <i
+                class="fa-solid fa-envelope absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+              ></i>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label
+              for="password"
+              class="block mb-2 text-sm font-semibold text-gray-700"
+              >Password</label
+            >
+            <div class="relative">
+              <input
+                class="pl-10 pr-4 w-full py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="••••••••"
+                required
+              />
+              <i
+                class="fa-solid fa-lock absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+              ></i>
+            </div>
+          </div>
+          <p id="verify-alert" class="text-red-500 text-[10px] mt-1 hidden"></p>
+          <button
+            type="submit"
+            class="bg-blue-600 hover:bg-blue-700 transition-colors w-full py-3 rounded-xl mt-2 text-white font-bold flex items-center justify-center gap-2"
+          >
+            Sign In
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          </button>
+
+          <div class="text-center mt-4">
+            <p class="text-sm text-gray-600">
+              Don't have an account?
+              <a
+                href="registration/registration.html"
+                class="text-blue-600 font-bold hover:underline"
+                >Sign Up</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

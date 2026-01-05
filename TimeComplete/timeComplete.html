@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | ExamSystem</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../config.js"></script>
+  </head>
+
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+    <nav
+      class="flex justify-between items-center py-3 px-6 lg:px-20 bg-white shadow-sm border-b"
+    >
+      <div class="icon">
+        <a href="#">
+          <h1 class="text-2xl font-extrabold text-blue-600 tracking-tight">
+            ExamSystem
+          </h1>
+        </a>
+      </div>
+
+      <div class="btn btn-normal gap-2">
+        <a href="">SignOut</a>
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </div>
+    </nav>
+
+    <header
+      class="flex flex-col justify-center items-center gap-16 md:gap-10 pt-48 text-center md:pt-10"
+    >
+      <div
+        id="alarm"
+        class="icon text-red-500 border bg-blue-200 rounded-full w-[100px] h-[100px] flex items-center justify-center text-5xl"
+      >
+        <i class="fa-regular fa-alarm-clock text-5xl text-blue-500"></i>
+      </div>
+      <div id="status" class="font-light">
+        <span class="relative flex size-3">
+          <span
+            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"
+          ></span>
+          <span
+            class="relative inline-flex size-3 rounded-full bg-sky-500"
+          ></span>
+        </span>
+        <p class="fa-border p-2 rounded-3xl w-fit bg-white">Status: FINISHED</p>
+      </div>
+      <div class="w-[80%] md:w-full">
+        <h2 id="showUserName" class="text-2xl font-bold text-gray-800"></h2>
+        <p class="font-light text-gray-500 text-center">
+          Don't worry, your exam has been automatically submitted. your exam is
+          now complete.
+        </p>
+      </div>
+      <div
+        id="toGradeBtn"
+        class="btn rounded-5xl bg-blue-400 text-white px-6 py-3 hover:bg-blue-500 transition-colors"
+      >
+        <span> to Grade </span>
+      </div>
+    </header>
+
+    <script src="./timeComplete.js"></script>
+  </body>
+</html>
